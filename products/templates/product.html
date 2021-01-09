@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            {% if product %}
+            <ul class="list-group">
+                <li class="list-group-item"><img style="" src="{{product.image_url}}" class="card-img-top" alt="{{product.name}}"></li>
+                <li class="list-group-item">ID: {{product.id}}</li>
+                <li class="list-group-item">Nom: {{product.name}}</li>
+                <li class="list-group-item">Stock: {{product.stock}}</li>
+                <li class="list-group-item">Prix: {{product.price}}€</li>
+            </ul>
+            {% endif %}
+            <a href="/" class="btn btn-danger">Retour</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
